@@ -1,2 +1,7 @@
 @@include('files/clientLogic.js', {});
-@@include('files/dynamicAdaptive.js', {});
+@@include('files/forms.js', {});
+//@@include('files/dynamicAdaptive.js', {});
+
+//========================================================================================================================================================
+
+

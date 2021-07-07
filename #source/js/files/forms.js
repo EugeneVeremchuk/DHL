@@ -98,6 +98,8 @@ function form_validate_input(input) {
 //ChooseFile/PreviewFile
 
 //Слушаем изменения в инпуте file
+
+/*
 formImage.addEventListener('change', () => { uploadFile(formImage.files[0]); });
 
 function uploadFile(file) {
@@ -122,6 +124,7 @@ function uploadFile(file) {
 	};
 	reader.readAsDataURL(file);
 }
+*/
 
 function form_add_error(input) {
 	input.classList.add('_error');
