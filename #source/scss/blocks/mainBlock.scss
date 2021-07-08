@@ -1,0 +1,83 @@
+.main {
+   background-color: $colorRed;
+   background-image: url("../../img/mainBlock/main-bg.jpg");
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+
+   min-height: 100vh;
+
+   position: relative;
+   z-index: 200;
+
+   margin: 0px 0px 150px 0px;
+
+   &__container {
+      @include adaptiv-value("padding-top", 360, 180, 1);
+      @include adaptiv-value("padding-bottom", 180, 80, 1);
+   }
+
+   &__title {
+      @include adaptiv-value("font-size", 70, 30, 1);
+      font-weight: 700;
+      color: $colorTextWhite;
+      letter-spacing: 2px;
+   }
+
+   &__line {
+      @include adaptiv-value("width", 100, 70, 1);
+      height: 4px;
+      background-color: $colorYellow;
+      @include adaptiv-value("margin-top", 40, 20, 1);
+      @include adaptiv-value("margin-bottom", 40, 20, 1);
+   }
+
+   &__text {
+      @include adaptiv-value("font-size", 20, 15, 1);
+      color: $colorTextYellow;
+      @include adaptiv-value("line-height", 30, 20, 1);
+
+      @include adaptiv-value("margin-bottom", 40, 20, 1);
+   }
+
+   &__advantage {
+      display: flex;
+      flex-wrap: wrap;
+      @include adaptiv-value("margin-bottom", 40, 20, 1);
+
+      &-item {
+         @include adaptiv-value("font-size", 20, 17, 1);
+         color: $colorTextWhite;
+         font-weight: 600;
+         text-transform: uppercase;
+         letter-spacing: 0.6px;
+         @include adaptiv-value("margin-bottom", 20, 10, 1);
+         margin-right: 30px;
+
+         @media (max-width: $md4+px) {
+            flex: 0 1 100%;
+         }
+
+         &::before {
+            content: "";
+            display: inline-block;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: $colorYellow;
+
+            margin: 0px 20px 0px 0px;
+         }
+      }
+   }
+
+   &__button {
+      margin: 0px 20px 0px 0px;
+      &-btn {
+         margin: 0px 20px 0px 0px;
+         @media (max-width:$md4+px){
+            margin: 0px 20px 10px 0px;
+         }
+      }
+   }
+}

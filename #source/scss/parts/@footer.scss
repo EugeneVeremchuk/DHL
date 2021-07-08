@@ -1,10 +1,11 @@
 .footer {
+   position: relative;
    &__container {
    }
 
    &__content {
       //min-height: 310px;
-      padding: 70px 0px;
+      padding: 72px 0px;
       display: flex;
 
       flex-wrap: wrap;

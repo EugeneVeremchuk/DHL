@@ -1,4 +1,10 @@
 .header {
+   position: absolute;
+   width: 100%;
+   top: 0;
+   left: 0;
+
+   z-index: 500;
    &__container-top {
       background-color: $colorRed;
       position: relative;
@@ -169,6 +175,7 @@
 
             background-color: $colorRed;
 
+            
             &::before {
                content: "";
                position: absolute;
@@ -177,11 +184,12 @@
                top: 50px;
                left: 0px;
                background-color: $colorYellow;
-               z-index: 2;
+               z-index: 100;
                @media (max-width:$md4+px){
                   height: 100px;
                }
             }
+            
 
             &._active {
                top: 0;
