@@ -10,8 +10,6 @@
    position: relative;
    z-index: 200;
 
-   margin: 0px 0px 150px 0px;
-
    &__container {
       @include adaptiv-value("padding-top", 360, 180, 1);
       @include adaptiv-value("padding-bottom", 180, 80, 1);

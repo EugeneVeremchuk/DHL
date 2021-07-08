@@ -401,6 +401,12 @@ body.ie ._ibg img {
   display: block;
 }
 
+.form__error {
+  margin: 0px 0px 20px 0px;
+  color: #ffffff;
+  font-weight: 600;
+}
+
 ._btn {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -1007,7 +1013,6 @@ textarea.input {
   min-height: 100vh;
   position: relative;
   z-index: 200;
-  margin: 0px 0px 150px 0px;
 }
 
 .main__container {
@@ -1072,6 +1077,115 @@ textarea.input {
 
 .main__button-btn {
   margin: 0px 20px 0px 0px;
+}
+
+.service {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.service__title {
+  margin-bottom: 80px;
+  font-size: 150px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #f8f8f8;
+  position: relative;
+}
+
+.service__title::before {
+  content: "Awesome Services";
+  font-size: 50px;
+  color: #ba0000;
+  text-transform: none;
+  padding: 0px 0px 0px 10px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(0px, -50%);
+      -ms-transform: translate(0px, -50%);
+          transform: translate(0px, -50%);
+}
+
+.service__cards {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+  row-gap: 30px;
+}
+
+.card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto auto 1fr auto;
+  -ms-grid-columns: 1fr;
+      grid-template: auto auto 1fr auto/1fr;
+}
+
+.card__image {
+  padding: 0px 0px 60% 0px;
+  margin: 0px 0px 20px 0px;
+}
+
+.card__title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ba0000;
+  text-transform: uppercase;
+  margin: 0px 0px 20px 0px;
+}
+
+.card__description {
+  font-size: 16px;
+  line-height: 26px;
+  color: #777777;
+  margin: 0px 0px 20px 0px;
+}
+
+.card__more {
+  font-size: 16px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.card__more .icon-triangle {
+  font-size: 10px;
+  color: #ba0000;
+}
+
+.card-search {
+  background-color: #ba0000;
+  padding: 30px;
+}
+
+.card-search__title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.card-search__line {
+  width: 60px;
+  height: 2px;
+  background-color: #ffcc00;
+  margin: 30px 0px;
+}
+
+.card-search__text {
+  font-size: 16px;
+  line-height: 26px;
+  color: #ffffff;
+  margin: 0px 0px 35px 0px;
+}
+
+.form__input {
+  height: 50px;
+  background-color: #9d0000;
+  color: #ffffff;
+  margin: 0px 0px 20px 0px;
 }
 
 .footer {
@@ -1245,6 +1359,26 @@ textarea.input {
 
   .main__advantage-item {
     margin-bottom: calc(10px + 10 * ((100vw - 320px) / 850));
+  }
+
+  .service {
+    padding-top: calc(40px + 60 * ((100vw - 320px) / 850));
+  }
+
+  .service {
+    padding-bottom: calc(40px + 60 * ((100vw - 320px) / 850));
+  }
+
+  .service__title {
+    margin-bottom: calc(30px + 50 * ((100vw - 320px) / 850));
+  }
+
+  .service__title {
+    font-size: calc(60px + 90 * ((100vw - 320px) / 850));
+  }
+
+  .service__title::before {
+    font-size: calc(25px + 25 * ((100vw - 320px) / 850));
   }
 }
 
