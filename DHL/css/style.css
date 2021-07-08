@@ -1061,7 +1061,7 @@ textarea.input {
   }
 }
 
-@media (max-width: 1915px) {
+@media (max-width: 1910px) {
   .footer__left {
     display: none;
   }
