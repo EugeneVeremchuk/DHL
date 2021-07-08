@@ -1136,6 +1136,9 @@ textarea.input {
   color: #ba0000;
   text-transform: uppercase;
   margin: 0px 0px 20px 0px;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  -o-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
 }
 
 .card__description {
@@ -1149,6 +1152,9 @@ textarea.input {
   font-size: 16px;
   font-weight: 700;
   color: #000000;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  -o-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
 }
 
 .card__more .icon-triangle {
@@ -1186,6 +1192,13 @@ textarea.input {
   background-color: #9d0000;
   color: #ffffff;
   margin: 0px 0px 20px 0px;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  -o-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.form__input._focus {
+  border: 3px solid #ffffff;
 }
 
 .footer {
@@ -1362,11 +1375,11 @@ textarea.input {
   }
 
   .service {
-    padding-top: calc(40px + 60 * ((100vw - 320px) / 850));
+    padding-top: calc(50px + 50 * ((100vw - 320px) / 850));
   }
 
   .service {
-    padding-bottom: calc(40px + 60 * ((100vw - 320px) / 850));
+    padding-bottom: calc(50px + 50 * ((100vw - 320px) / 850));
   }
 
   .service__title {
@@ -1582,6 +1595,16 @@ textarea.input {
   .header .menu__link:hover::before {
     content: "";
     height: 5px;
+  }
+
+  .card__title:hover {
+    color: #9d0000;
+  }
+
+  .card__more:hover {
+    -webkit-transform: translate(5px, 0px);
+        -ms-transform: translate(5px, 0px);
+            transform: translate(5px, 0px);
   }
 
   .content__item-option:hover {

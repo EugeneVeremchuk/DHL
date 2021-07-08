@@ -1,7 +1,7 @@
 .service {
 
-   @include adaptiv-value("padding-top", 100, 40, 1);
-   @include adaptiv-value("padding-bottom", 100, 40, 1);
+   @include adaptiv-value("padding-top", 100, 50, 1);
+   @include adaptiv-value("padding-bottom", 100, 50, 1);
 
    &__container {
    }
@@ -60,6 +60,14 @@
       text-transform: uppercase;
 
       margin: 0px 0px 20px 0px;
+
+      transition: all .2s ease-in-out 0s;
+
+      @media (any-hover: hover) {
+         &:hover{
+            color: $colorRedDark;
+         }
+      }
    }
 
    &__description {
@@ -76,6 +84,14 @@
       font-weight: 700;
 
       color: $colorBlack;
+
+      transition: all .2s ease-in-out 0s;
+
+      @media (any-hover: hover) {
+         &:hover{
+            transform: translate(5px,0px);
+         }
+      }
       .icon-triangle {
          font-size: 10px;
          color: $colorRed;
@@ -129,6 +145,11 @@
       color: $colorTextWhite;
 
       margin: 0px 0px 20px 0px;
+      transition: all .2s ease-in-out 0s;
+
+      &._focus {
+         border: 3px solid $colorWhite;
+      }
    }
 
    &__btn {
