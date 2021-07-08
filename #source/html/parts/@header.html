@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header" id="header">
    <div class="header__container-top">
       <div class="_container">
          <div class="header__top">
@@ -11,13 +11,49 @@
                </select>
             </div>
             <div class="header__top-right">
-               <a href="#"><div class="header__top-contact"><span class="icon-customer-service"></span>Contact Center</div></a>
+               <a href="#">
+                  <div class="header__top-contact"><span class="icon-customer-service"></span>Contact Center</div>
+               </a>
                <select name="form[]" class="header__top-country">
                   <option value="1" selected="selected">Country Profile</option>
                   <option value="2">USA</option>
                   <option value="3">Ukraine</option>
                   <option value="4">Russia</option>
                </select>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="header__container-bottom">
+      <div class="_container">
+         <div class="header__bottom">
+            <div class="header__logo">
+               <img src="img/header/logo.png" alt="logo">
+            </div>
+            <div class="header__menu menu">
+               <button type="button" class="menu__icon icon-menu">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+               </button>
+               <nav class="menu__body">
+                  <ul class="menu__list">
+                     <li class="menu__item"><a href="" class="menu__link">Express</a></li>
+                     <li class="menu__item"><a href="" class="menu__link">Parcel & Ecommerce</a></li>
+                     <li class="menu__item"><a href="" class="menu__link">Logistics</a></li>
+                     <li class="menu__item"><a href="" class="menu__link">Mail</a></li>
+                     <li class="menu__item"><a href="" class="menu__link">Press</a></li>
+                     <li class="menu__item"><a href="" class="menu__link">About</a></li>
+                  </ul>
+               </nav>
+            </div>
+            <div class="header__search">
+               <div class="header__search-icon">
+                  <span class="icon-search"></span>
+               </div>
+               <div class="header__search-input">
+                  <input autocomplete="off" type="text" name="form[]" data-error="Ошибка" data-value="" class="header__input input">
+               </div>
             </div>
          </div>
       </div>
