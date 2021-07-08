@@ -1,0 +1,123 @@
+.footer {
+   &__container {
+   }
+
+   &__content {
+      //min-height: 310px;
+      padding: 70px 0px;
+      display: flex;
+
+      flex-wrap: wrap;
+
+      @media (max-width:$md3+px){
+         padding: 30px 0px;
+      }
+
+      @media (max-width:$md4+px){
+         padding: 20px 0px; 
+      }
+   }
+
+   &__left {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      @media (max-width: $maxWidth+px) {
+         display: none;
+      }
+      img {
+      }
+   }
+
+   &__right {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+
+      @media (max-width: $maxWidth+px) {
+         display: none;
+      }
+      img {
+      }
+   }
+}
+
+.content {
+   &__item {
+      flex: 0 1 33.333%;
+
+      padding: 0px 0px 0px 60px;
+
+      @media (max-width: $md2+px) {
+         padding: 0px 0px 0px 40px;
+      }
+
+      @media (max-width: $md3+px) {
+         flex: 0 1 50%;
+
+         margin: 0px 0px 30px 0px;
+         &:last-child {
+            margin: 0px 0px 0px 0px;
+         }
+         padding: 0px 0px 0px 0px;
+      }
+
+      @media (max-width: $md4+px) {
+         flex: 0 1 100%;
+      }
+
+      &-title {
+         margin: 0px 0px 40px 0px;
+
+         font-size: 20px;
+         color: $colorTextRed;
+         font-weight: 700;
+         text-transform: uppercase;
+
+         @media (max-width:$md4+px){
+            margin: 0px 0px 20px 0px;
+         }
+      }
+
+      &-option {
+         margin: 0px 0px 10px 0px;
+         &:last-child {
+            margin: 0px 0px 0px 0px;
+         }
+
+         font-size: 14px;
+         font-weight: 600;
+         text-transform: uppercase;
+
+         white-space: nowrap;
+
+         color: $colorGray;
+
+         transition: all 0.1s ease-in-out 0s;
+
+         cursor: pointer;
+
+         @media (any-hover: hover) {
+            &:hover {
+               color: $colorTextYellow;
+            }
+         }
+
+         &.option-blue {
+            @media (any-hover: hover) {
+               &:hover {
+                  color: $colorBlue;
+               }
+            }
+         }
+
+         .icon-triangle {
+            margin: 0px 5px 0px 0px;
+
+            font-size: 10px;
+            color: $colorRed;
+         }
+      }
+   }
+}
