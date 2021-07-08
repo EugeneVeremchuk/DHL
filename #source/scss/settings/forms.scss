@@ -39,9 +39,9 @@
 	}
 	// .select__title
 	&__title {
-		color: #000;
-		border: 1px solid #d9d9d9;
-		background-color: #fff;
+		color: $colorTextWhite;
+		//border: 1px solid #d9d9d9;
+		background-color: $colorRed;
 		cursor: pointer;
 		border-radius: 4px;
 		@media (max-width: $md2+px) {
@@ -53,16 +53,17 @@
 		display: flex;
 		font-size: 14px;
 		height: 30px;
-		padding: 0px 15px;
+		//padding: 0px 15px;
 		align-items: center;
 		justify-content: space-between;
 		flex-direction: row-reverse;
 		span {
-			height: 1em;
+			height: 16px;
 			overflow: hidden;
 			display: -webkit-box;
 			-webkit-line-clamp: 1;
 			-webkit-box-orient: vertical;
+			margin: 0px 10px 0px 0px;
 		}
 		&:before {
 			content: "";
@@ -70,7 +71,9 @@
 			transition: all 0.3s ease 0s;
 			width: 11px;
 			height: 7px;
-			background: url("../img/icons/select.svg") center / 100% no-repeat;
+			background: url("../img/icons/arrow-down.svg") center / 100% no-repeat;
+
+			transform: translate(0px,-2px);
 		}
 	}
 	&__input {
@@ -80,15 +83,15 @@
 	}
 	// .select__options
 	&__options {
-		color: #000;
+		color: $colorTextWhite;
 		position: absolute;
 		top: 29px;
 		border-radius: 0 0 4px 4px;
 		min-width: 100%;
 		left: 0;
-		background-color: #fff;
+		background-color: $colorRed;
 		border-top: 0;
-		border: 1px solid #d9d9d9;
+		//border: 1px solid #d9d9d9;
 		border-top: 0;
 		font-size: 14px;
 		padding: 10px 0px 5px 0px;
@@ -100,10 +103,11 @@
 	&__option {
 		cursor: pointer;
 		padding: 5px 15px;
+		font-size: 15px;
 		margin: 0px 0px 0px 0px;
 		@media (min-width: 992px) {
 			&:hover {
-				background: #d9d9d9;
+				background: $colorRedDark;
 			}
 		}
 	}
