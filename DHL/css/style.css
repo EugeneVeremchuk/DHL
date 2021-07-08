@@ -997,7 +997,7 @@ textarea.input {
 }
 
 ._no-webp .main{
-  background-image: url("/img/mainBlock/main-bg.jpg"); }
+  background-image: url("../img/mainBlock/main-bg.jpg"); }
 
 .main {
   background-color: #ba0000;
@@ -1459,4 +1459,4 @@ textarea.input {
   }
 }
 
-._webp .main{ background-image: url(/img/mainBlock/main-bg.webp); }
+._webp .main{ background-image: url(../img/mainBlock/main-bg.webp); }
