@@ -12,7 +12,7 @@
 
    &__container {
       @include adaptiv-value("padding-top", 360, 180, 1);
-      @include adaptiv-value("padding-bottom", 180, 80, 1);
+      @include adaptiv-value("padding-bottom", 180, 50, 1);
    }
 
    &__title {
