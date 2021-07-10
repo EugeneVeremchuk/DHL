@@ -1,0 +1,56 @@
+.more {
+   @include adaptiv-value("padding-bottom", 85, 70, 1);
+   @include adaptiv-value("padding-top", 100, 70, 1);
+
+   background-color: $colorRed;
+   &__container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+   }
+
+   &__text {
+      @media (min-width: $md2+px) {
+         flex: 0 0 739 / 1170 * 100%;
+      }
+
+      &-title {
+         @include adaptiv-value("font-size", 30, 25, 1);
+         color: $colorTextWhite;
+         letter-spacing: 0.9px;
+
+         text-transform: uppercase;
+         font-weight: 700;
+
+         @include adaptiv-value("margin-bottom", 40, 20, 1);
+      }
+
+      &-subtitle {
+         @include adaptiv-value("font-size", 16, 14, 1);
+         @include adaptiv-value("line-height", 24, 20, 1);
+         color: $colorTextWhite;
+
+         letter-spacing: 0.48px;
+         font-weight: 400;
+
+         @media (max-width:$md2+px){
+            margin: 0px 0px 30px 0px;
+         }
+      }
+   }
+
+   &__button {
+      align-self: center;
+      padding: 15px 30px;
+
+      background-color: $colorRedDark;
+      border-radius: 25px;
+
+      color: $colorTextWhite;
+      font-size: 14px;
+
+      text-transform: uppercase;
+
+      letter-spacing: 1.2px;
+   }
+}
