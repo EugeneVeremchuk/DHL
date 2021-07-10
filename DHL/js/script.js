@@ -53,8 +53,9 @@ let unlock = true;
 //=================
 //Menu
 let iconMenu = document.querySelector(".icon-menu");
+let delay = 500;
+
 if (iconMenu != null) {
-	let delay = 500;
 	let menuBody = document.querySelector(".menu__body");
 	iconMenu.addEventListener("click", function (e) {
 		if (unlock) {
@@ -70,6 +71,19 @@ function menu_close() {
 	iconMenu.classList.remove("_active");
 	menuBody.classList.remove("_active");
 }
+
+document.addEventListener('click', function (e) {
+	const currentClick = e.target;
+	const menuLink = document.querySelectorAll('.menu__link');
+
+	menuLink.forEach(item => {
+		if (currentClick === item) {
+			menu_close();
+			body_lock_remove(delay);
+		}
+	});
+});
+
 //=================
 //BodyLock
 function body_lock(delay) {
@@ -123,22 +137,22 @@ function body_lock_add(delay) {
 //Tabs
 let tabs = document.querySelectorAll("._tabs");
 for (let index = 0; index < tabs.length; index++) {
-   let tab = tabs[index];
-   let tabs_items = tab.querySelectorAll("._tabs-item");
-   let tabs_blocks = tab.querySelectorAll("._tabs-block");
-   for (let index = 0; index < tabs_items.length; index++) {
-      let tabs_item = tabs_items[index];
-      tabs_item.addEventListener("click", function (e) {
-         for (let index = 0; index < tabs_items.length; index++) {
-            let tabs_item = tabs_items[index];
-            tabs_item.classList.remove('_active');
-            tabs_blocks[index].classList.remove('_active');
-         }
-         tabs_item.classList.add('_active');
-         tabs_blocks[index].classList.add('_active');
-         e.preventDefault();
-      });
-   }
+	let tab = tabs[index];
+	let tabs_items = tab.querySelectorAll("._tabs-item");
+	let tabs_blocks = tab.querySelectorAll("._tabs-block");
+	for (let index = 0; index < tabs_items.length; index++) {
+		let tabs_item = tabs_items[index];
+		tabs_item.addEventListener("click", function (e) {
+			for (let index = 0; index < tabs_items.length; index++) {
+				let tabs_item = tabs_items[index];
+				tabs_item.classList.remove('_active');
+				tabs_blocks[index].classList.remove('_active');
+			}
+			tabs_item.classList.add('_active');
+			tabs_blocks[index].classList.add('_active');
+			e.preventDefault();
+		});
+	}
 }
 
 document.querySelector('._tabs-item:nth-child(1)').click();
@@ -1949,7 +1963,7 @@ window.onload = function () {
       } else {
          searchInput.classList.remove('_active');
       }
-    });
+   });
 }
 
 new WOW().init();

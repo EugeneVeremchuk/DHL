@@ -6066,13 +6066,38 @@ textarea.input {
   letter-spacing: 1.2px;
 }
 
+.client {
+  padding-bottom: 100px;
+  padding-top: 100px;
+}
+
+.client__container {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(233px, 1fr));
+  gap: 30px;
+}
+
+.client__image {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  -o-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.client__image img {
+  width: 100%;
+}
+
 .footer {
   position: relative;
-  padding: 500px 0px 0px 0px;
+  border-top: 3px solid #ba0000;
+  border-bottom: 3px solid #ffcc00;
 }
 
 .footer__content {
-  padding: 72px 0px;
+  padding: 70.5px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6312,6 +6337,14 @@ textarea.input {
 
   .more__text-subtitle {
     line-height: calc(20px + 4 * ((100vw - 320px) / 850));
+  }
+
+  .client {
+    padding-bottom: calc(60px + 40 * ((100vw - 320px) / 850));
+  }
+
+  .client {
+    padding-top: calc(60px + 40 * ((100vw - 320px) / 850));
   }
 }
 
@@ -6563,6 +6596,10 @@ textarea.input {
 
   .item__title:hover {
     color: #9d0000;
+  }
+
+  .client__image:hover {
+    border: 2px solid #9d0000;
   }
 
   .content__item-option:hover {

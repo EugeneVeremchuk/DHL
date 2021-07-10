@@ -1,0 +1,25 @@
+.client {
+   @include adaptiv-value("padding-bottom", 100, 60, 1);
+   @include adaptiv-value("padding-top", 100, 60, 1);
+   &__container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(233px, 1fr));
+      gap: 30px;
+   }
+
+   &__image {
+      justify-self: center;
+
+      transition: all .2s ease-in-out 0s;
+
+      @media (any-hover: hover) {
+         &:hover{
+            border: 2px solid $colorRedDark;
+         }
+      }
+
+      img {
+         width: 100%;
+      }
+   }
+}

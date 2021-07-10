@@ -1,12 +1,15 @@
 .footer {
    position: relative;
-   padding: 500px 0px 0px 0px;
+
+   border-top: 3px solid $colorRed;
+   border-bottom: 3px solid $colorYellow;
+
    &__container {
    }
 
    &__content {
       //min-height: 310px;
-      padding: 72px 0px;
+      padding: 70.5px 0px;
       display: flex;
 
       flex-wrap: wrap;

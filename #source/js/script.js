@@ -18,7 +18,7 @@ window.onload = function () {
       } else {
          searchInput.classList.remove('_active');
       }
-    });
+   });
 }
 
 new WOW().init();
