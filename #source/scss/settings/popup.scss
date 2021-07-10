@@ -1,7 +1,7 @@
 //====================================================================================================
 .popup {
 	-webkit-overflow-scrolling: touch;
-	z-index: 100;
+	z-index: 900;
 	padding: 30px 10px;
 	position: fixed;
 	top: 0px;
@@ -62,6 +62,18 @@
 		padding: 50px;
 		width: 100%;
 		max-width: 800px;
+	}
+	&__name {
+		font-size: 20px;
+		color: $colorTextRed;
+		margin: 0px 0px 20px 0px;
+	}
+	&__hello {
+		@extend .popup__name;
+	}
+	&__contact {
+		@extend .popup__name;
+		margin: 0px 0px 0px 0px;
 	}
 	// .popup__close
 	&__close {

@@ -5280,7 +5280,7 @@ textarea.input {
 
 .popup {
   -webkit-overflow-scrolling: touch;
-  z-index: 100;
+  z-index: 900;
   padding: 30px 10px;
   position: fixed;
   top: 0px;
@@ -5376,6 +5376,18 @@ textarea.input {
   max-width: 800px;
 }
 
+.popup__name,
+.popup__contact,
+.popup__hello {
+  font-size: 20px;
+  color: #ba0000;
+  margin: 0px 0px 20px 0px;
+}
+
+.popup__contact {
+  margin: 0px 0px 0px 0px;
+}
+
 .popup__close {
   width: 20px;
   height: 20px;
@@ -5398,7 +5410,7 @@ textarea.input {
   --size: 200px;
   --thickness: 3px;
   --duration: 1s;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -6239,8 +6251,7 @@ textarea.input {
 
 .footer {
   position: relative;
-  border-top: 3px solid #ba0000;
-  border-bottom: 3px solid #ffcc00;
+  border-bottom: 3px solid #ba0000;
 }
 
 .footer__content {
@@ -6250,6 +6261,25 @@ textarea.input {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.footer__sign {
+  text-align: center;
+  padding: 0px 0px 20px 0px;
+}
+
+.footer__sign a {
+  text-transform: uppercase;
+  font-size: 20px;
+  color: #ba0000;
+}
+
+.footer__sign a span {
+  text-transform: none;
+  text-decoration: underline;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  -o-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
 }
 
 .footer__left {
@@ -6750,6 +6780,10 @@ textarea.input {
   }
 
   .item__title:hover {
+    color: #9d0000;
+  }
+
+  .footer__sign a span:hover {
     color: #9d0000;
   }
 

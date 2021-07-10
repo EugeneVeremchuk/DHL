@@ -452,6 +452,9 @@ document.addEventListener('keydown', function (e) {
 	}
 });
 
+const authorLink = document.querySelector('.author');
+authorLink.click();
+
 //========================================================================================================================================================
 
 //SlideToggle

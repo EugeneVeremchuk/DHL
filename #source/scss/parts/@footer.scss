@@ -1,8 +1,8 @@
 .footer {
    position: relative;
 
-   border-top: 3px solid $colorRed;
-   border-bottom: 3px solid $colorYellow;
+   //border-top: 3px solid $colorRed;
+   border-bottom: 3px solid $colorRed;
 
    &__container {
    }
@@ -20,6 +20,27 @@
 
       @media (max-width:$md4+px){
          padding: 20px 0px; 
+      }
+   }
+
+   &__sign {
+      text-align: center;
+      padding: 0px 0px 20px 0px;
+      a {
+         text-transform: uppercase;
+         font-size: 20px;
+         color: $colorRed;
+         span {
+            text-transform: none;
+            text-decoration: underline;
+
+            transition: all .2s ease-in-out 0s;
+            @media (any-hover: hover) {
+               &:hover{
+                  color: $colorRedDark;
+               }
+            }
+         }
       }
    }
 
