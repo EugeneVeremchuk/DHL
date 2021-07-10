@@ -4,6 +4,11 @@
 ._tabs {
 }
 ._tabs-item {
+	&._active {
+		background-color: $colorYellow;
+		color: $colorRedDark;
+		box-shadow: 0 10px 18px rgba($color: $colorYellow, $alpha: 0.4);
+	}
 }
 ._tabs-block {
 	display: none;
@@ -15,27 +20,76 @@
 //========================================================================================================================================================
 
 // Spollers
-.parent-spollers {
+.express-spollers {
 	&._init {
 		._icon {
+
+			/*
+			cursor: pointer;
 			position: relative;
 			&::before,
 			&::after {
-				content:'';
+				content: "";
 				position: absolute;
 				width: 15px;
 				height: 2px;
 				top: 50%;
 				right: 10px;
+				background-color: $colorBlack;
+
+				transition: all .2s ease-in-out 0s;
 			}
 			&::before {
-				content:'';
-				
+				content: "";
 			}
 			&::after {
-				content:'';
+				content: "";
 				transform: rotate(-90deg);
 			}
+			&._active {
+				&::after {
+					content: "";
+					transform: rotate(0deg);
+				}
+			}
+			*/
+
+			/*
+			cursor: pointer;
+         position: relative;
+
+         &::before {
+            content: "";
+            width: 6px;
+            background-color: #fff;
+            height: 2px;
+            transition: transform 0.3s ease 0s;
+            transform: translate(0, -50%) rotate(-45deg);
+            position: absolute;
+            right: 15px;
+            top: 50%;
+         }
+         &::after {
+            content: "";
+            width: 6px;
+            background-color: #fff;
+            height: 2px;
+            transition: transform 0.3s ease 0s;
+            transform: translate(0, -50%) rotate(45deg);
+            position: absolute;
+            right: 12px;
+            top: 50%;
+         }
+         &._active {
+            &::before {
+               transform: translate(0, -50%) rotate(45deg);
+            }
+            &::after {
+               transform: translate(0, -50%) rotate(-45deg);
+            }
+         }
+			*/
+			
 		}
 	}
 }
@@ -206,5 +260,3 @@ body.ie {
 }
 
 //========================================================================================================================================================
-
-

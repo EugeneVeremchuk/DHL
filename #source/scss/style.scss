@@ -28,7 +28,7 @@ $fontSize: 14;
 $minWidth: 320;
 $maxWidth: 1920;
 $maxWidthContainer: 1170;
-$md1: $maxWidthContainer + 12;
+$md1: $maxWidthContainer + 12; 
 $md2: 991.98;
 $md3: 769.98;
 $md4: 479.98;
@@ -89,6 +89,7 @@ body {
 @import "blocks/mainBlock";
 @import "blocks/serviceBlock";
 @import "blocks/aboutBlock";
+@import "blocks/expressBlock";
 @import "parts/@footer";
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
 

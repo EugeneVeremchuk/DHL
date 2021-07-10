@@ -1,0 +1,156 @@
+.express {
+   @include adaptiv-value("padding-top", 100, 70, 1);
+   @include adaptiv-value("padding-bottom", 100, 70, 1);
+
+   &__container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+
+      column-gap: 100px;
+      row-gap: 30px;
+
+      @media (max-width:$md4+px){
+         grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      }
+   }
+
+   &__logistic {
+      background-color: $colorRed;
+   }
+
+   &__image {
+      justify-self: center;
+      align-self: center;
+
+      transform: translate(-7px,-7px);
+      img {
+         width: 100%;
+      }
+   }
+}
+.express-tabs {
+   grid-template: auto 1fr / 1fr;
+
+   &__nav {
+      display: grid;
+      grid-auto-flow: column;
+      &-item {
+         text-align: center;
+
+         padding: 20px 0px;
+         color: $colorTextWhite;
+
+         text-transform: uppercase;
+         font-weight: 600;
+
+         letter-spacing: 1.4px;
+
+         width: 100%;
+
+         cursor: pointer;
+      }
+   }
+
+   &__content {
+      &-block {
+         @include adaptiv-value("padding", 40, 20, 1);
+      }
+   }
+}
+.express-spollers {
+   margin: 0px 0px 20px 0px;
+
+   &:last-child {
+      margin: 0px 0px 0px 0px;
+   }
+   &__body {
+      &-title {
+      }
+
+      &-content {
+      }
+   }
+}
+.body-content {
+   padding: 20px;
+
+   background-color: $colorRedDark;
+
+   border-left: 2px solid $colorYellow;
+   border-right: 2px solid $colorYellow;
+   border-bottom: 2px solid $colorYellow;
+   &__title {
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 1px;
+
+      color: $colorTextWhite;
+
+      margin: 0px 0px 20px 0px;
+   }
+
+   &__options {
+   }
+
+   &__option {
+      color: $colorTextWhite;
+
+      letter-spacing: 1px;
+
+      margin: 0px 0px 10px 0px;
+      .icon-triangle {
+         font-size: 10px;
+
+         margin: 0px 10px 0px 0px;
+
+         color: $colorYellow;
+      }
+   }
+}
+.body-title {
+   display: flex;
+
+   border: 2px solid $colorWhite;
+   //height: 60px;
+
+   cursor: pointer;
+
+   transition: all 0.2s ease-in-out 0s;
+
+   &._active {
+      background-color: $colorYellow;
+      border: 0px solid transparent;
+
+      .body-title__text {
+         font-weight: 600;
+         color: $colorRed;
+      }
+
+      .body-title__icon {
+         border-left: 2px solid $colorRed;
+         span {
+            color: $colorRed;
+
+            transform: rotate(-180deg);
+         }
+      }
+   }
+
+   &__text {
+      text-transform: uppercase;
+      color: $colorTextWhite;
+      flex: 1 1 auto;
+      padding: 20px;
+   }
+   &__icon {
+      border-left: 2px solid $colorWhite;
+      padding: 20px;
+      span {
+         transition: all 0.2s ease-in-out 0s;
+
+         color: $colorTextWhite;
+
+         display: inline-block;
+      }
+   }
+}
