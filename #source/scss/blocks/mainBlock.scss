@@ -10,6 +10,10 @@
    position: relative;
    z-index: 200;
 
+   display: flex; 
+   flex-direction: column;
+   justify-content: center;
+
    &__container {
       @include adaptiv-value("padding-top", 360, 180, 1);
       @include adaptiv-value("padding-bottom", 180, 50, 1);

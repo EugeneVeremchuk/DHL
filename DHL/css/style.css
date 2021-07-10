@@ -4575,6 +4575,7 @@ html {
 }
 
 body {
+  position: relative;
   background-color: #ffffff;
   color: #000000;
   font-size: 14px;
@@ -5391,6 +5392,142 @@ textarea.input {
   transition: all 0.2s ease-in-out 0s;
 }
 
+.preloader {
+  z-index: 1000;
+  --bg-color: #1e212a;
+  --size: 200px;
+  --thickness: 3px;
+  --duration: 1s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffcc00;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: var(--duration);
+  -o-transition: var(--duration);
+  transition: var(--duration);
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  -o-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.preloader_content {
+  position: relative;
+  width: var(--size);
+  height: var(--size);
+}
+
+.preloader_first,
+.preloader_second,
+.preloader_third {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  -webkit-animation: var(--duration) linear infinite;
+          animation: var(--duration) linear infinite;
+}
+
+.preloader_first {
+  border-bottom: var(--thickness) solid #ba0000;
+  -webkit-animation-name: first;
+          animation-name: first;
+}
+
+.preloader_second {
+  border-right: var(--thickness) solid #ba0000;
+  -webkit-animation-name: second;
+          animation-name: second;
+}
+
+.preloader_third {
+  border-top: var(--thickness) solid #ba0000;
+  -webkit-animation-name: third;
+          animation-name: third;
+}
+
+@-webkit-keyframes first {
+  0% {
+    -webkit-transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+            transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+            transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+  }
+}
+
+@keyframes first {
+  0% {
+    -webkit-transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+            transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+            transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+  }
+}
+
+@-webkit-keyframes second {
+  0% {
+    -webkit-transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+            transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+            transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+  }
+}
+
+@keyframes second {
+  0% {
+    -webkit-transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+            transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+            transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+  }
+}
+
+@-webkit-keyframes third {
+  0% {
+    -webkit-transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+            transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+            transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+  }
+}
+
+@keyframes third {
+  0% {
+    -webkit-transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+            transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+            transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+  }
+}
+
 .header {
   position: absolute;
   width: 100%;
@@ -5572,6 +5709,16 @@ textarea.input {
   min-height: 100vh;
   position: relative;
   z-index: 200;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .main__container {
@@ -6357,6 +6504,10 @@ textarea.input {
     font-size: 18px;
   }
 
+  .preloader {
+    --size: 150px;
+  }
+
   .header__menu {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -6490,6 +6641,10 @@ textarea.input {
 }
 
 @media (max-width: 479.98px) {
+  .preloader {
+    --size: 120px;
+  }
+
   .header__top {
     display: block;
     height: auto;
@@ -6596,10 +6751,6 @@ textarea.input {
 
   .item__title:hover {
     color: #9d0000;
-  }
-
-  .client__image:hover {
-    border: 2px solid #9d0000;
   }
 
   .content__item-option:hover {

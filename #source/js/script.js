@@ -10,6 +10,15 @@ const searchIcon = document.querySelector('.icon-search');
 const searchInput = document.querySelector('.header__input');
 
 window.onload = function () {
+
+   body_lock();
+
+   setTimeout(function () {
+      const preloader = document.querySelector('.preloader');
+      preloader.style.display = 'none';
+      body_lock_remove();
+   }, 3000);
+
    document.addEventListener('click', function (e) {
       const currentClick = e.target;
 
@@ -19,6 +28,7 @@ window.onload = function () {
          searchInput.classList.remove('_active');
       }
    });
+
 }
 
 new WOW().init();

@@ -48,6 +48,7 @@ html {
    font-size: 62.5%;
 }
 body {
+   position: relative;
    background-color: $mainBackgroundColor;
    color: $mainTextColor;
    font-size: #{$fontSize + px};
@@ -83,6 +84,7 @@ body {
 @import "settings/graphics";
 @import "settings/forms";
 @import "settings/popup";
+@import "settings/preloader";
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
 
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
